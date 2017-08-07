@@ -1,5 +1,5 @@
 var app = require('./lib/toureiro')({
-    development: true,
+    development: false,
     redis: {
         host: 'localhost',
         port: 6379,
