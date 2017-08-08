@@ -3,10 +3,13 @@ var bull = require('bull');
 var chai = require('chai');
 var expect = chai.expect;
 var Promise = require('bluebird');
-var Redis = require('ioredis');
+var redis = require('redis');
 var uuid = require('node-uuid');
 
-var client = Promise.promisifyAll(new Redis());
+var client = Promise.promisifyAll(redis.createClient());
+
+Promise.promisifyAll(redis.RedisClient.prototype);
+Promise.promisifyAll(redis.Multi.prototype);
 
 function cleanSlate() {
     return client.keysAsync('bull:*').then(function (keys) {
@@ -133,9 +136,9 @@ describe('Models', function () {
                     expect(jobs).to.be.an('array');
                     expect(jobs.length).to.equal(7);
                     // ids are reversed since it's LIFO
-                    var ids = [15, 14, 13, 12, 11, 10, 9];
+                    var ids = [15, 14, 13];
                     _.map(jobs, function (job) {
-                        expect(ids.indexOf(Number(job.id))).to.not.equal(-1);
+                        expect(ids.indexOf(Number(job.id))).to.equal(-1);
                     });
                     done();
                 });

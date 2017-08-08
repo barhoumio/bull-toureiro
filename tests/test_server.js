@@ -3,11 +3,14 @@ var bull = require('bull');
 var chai = require('chai');
 var expect = chai.expect;
 var Promise = require('bluebird');
-var Redis = require('ioredis');
+var redis = require('redis');
 var uuid = require('node-uuid');
 var request = require('supertest');
 
-var client = Promise.promisifyAll(new Redis());
+var client = Promise.promisifyAll(redis.createClient());
+
+Promise.promisifyAll(redis.RedisClient.prototype);
+Promise.promisifyAll(redis.Multi.prototype);
 
 function cleanSlate() {
     return client.keysAsync('bull:*').then(function (keys) {
@@ -51,7 +54,9 @@ var Job = require('../lib/models/job');
 
 var app = Toureiro({
     redis: {
-        db: 7
+        host: 'localhost',
+        port: 6379,
+        opts: {}
     }
 });
 

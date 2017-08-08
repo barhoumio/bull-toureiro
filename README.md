@@ -1,7 +1,7 @@
 # Toureiro
 
-[![npm version](https://badge.fury.io/js/toureiro.svg)](https://badge.fury.io/js/toureiro)
-[![Build Status](https://travis-ci.org/Epharmix/Toureiro.svg?branch=master)](https://travis-ci.org/Epharmix/Toureiro)
+[![npm version](https://badge.fury.io/js/bull-toureiro.svg)](https://badge.fury.io/js/bull-toureiro)
+[![Build Status](https://travis-ci.org/barhoumio/bull-toureiro.svg?branch=master)](https://travis-ci.org/barhoumio/bull-toureiro)
 
 A graphical monitoring interface for the distributed job queue [bull](https://github.com/OptimalBits/bull) built using `express` and `react`. Toureiro provides simple monitoring features as well as the ability to promote delayed jobs directly.
 
@@ -13,16 +13,16 @@ A graphical monitoring interface for the distributed job queue [bull](https://gi
 
 ## Get Started
 
-First install `toureiro` from `npm`.
+First install `bull-toureiro` from `npm`.
 
 ```
-npm install toureiro
+npm install bull-toureiro
 ```
 
 You can then use `toureiro` in your project. The constructor `toureiro()` will return an `express` app, which you can then have it listen to any port you desire:
 
 ```javascript
-var toureiro = require('toureiro');
+var toureiro = require('bull-toureiro');
 var app = toureiro();
 var server = app.listen(3000, function() {
   console.log('Toureiro is now listening at port 3000...');
@@ -33,7 +33,7 @@ Or you can mount it to a subpath for your own `express` server:
 
 ```javascript
 var express = require('express');
-var toureiro = require('toureiro');
+var toureiro = require('bull-toureiro');
 
 var app = express();
 /**
@@ -111,7 +111,7 @@ It's compatible with all modern browsers. Since the front end relies on `react`,
 
 The MIT License (MIT)
 
-Copyright (c) 2015 Epharmix <evan@epharmix.com>
+Copyright (c) 2017 barhoumio
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
