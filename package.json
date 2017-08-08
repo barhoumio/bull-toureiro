@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/barhoumio/bull-toureiro"
+    "url": "git+https://github.com/barhoumio/bull-toureiro.git"
   },
   "engines": {
     "node": ">=4.2"
@@ -66,5 +66,8 @@
   },
   "bin": {
     "toureiro": "./.bin/toureiro.js"
+  },
+  "directories": {
+    "test": "tests"
   }
 }
