@@ -238,7 +238,7 @@ describe('Models', function () {
                         });
                         setTimeout(function () {
                             done();
-                        }, 100);
+                        }, 1000);
                     });
                 });
             });
@@ -277,7 +277,7 @@ describe('Models', function () {
                         });
                         setTimeout(function () {
                             done();
-                        }, 100);
+                        }, 1000);
                     });
                 });
             });
