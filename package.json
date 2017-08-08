@@ -38,7 +38,7 @@
     "jquery": "3.0.x",
     "lodash": "3.10.x",
     "minimist": "1.2.x",
-    "moment-timezone": "0.4.x",
+    "moment-timezone": "0.5.x",
     "pug": "2.0.0-beta6",
     "react": "0.14.x",
     "redis": "2.7.x"
