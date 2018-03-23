@@ -36,7 +36,6 @@
     "express": "4.15.x",
     "highlight.js": "8.8.x",
     "jquery": "3.0.x",
-    "lodash": "3.10.x",
     "minimist": "1.2.x",
     "moment-timezone": "0.5.x",
     "pug": "2.0.0-beta6",

@@ -137,7 +137,7 @@ describe('Models', function () {
                     expect(jobs.length).to.equal(7);
                     // ids are reversed since it's LIFO
                     var ids = [15, 14, 13];
-                    _.map(jobs, function (job) {
+                    jobs.map(function (job) {
                         expect(ids.indexOf(Number(job.id))).to.equal(-1);
                     });
                     done();
@@ -176,7 +176,7 @@ describe('Models', function () {
                     expect(jobs).to.be.an('array');
                     expect(jobs.length).to.equal(3);
                     var ids = [2, 3, 4];
-                    _.map(jobs, function (job) {
+                    jobs.map(function (job) {
                         expect(ids.indexOf(Number(job.id))).to.not.equal(-1);
                     });
                     done();
@@ -217,7 +217,7 @@ describe('Models', function () {
                     expect(jobs).to.be.an('array');
                     expect(jobs.length).to.equal(4);
                     var ids = [1, 2, 3, 4];
-                    _.map(jobs, function (job) {
+                    jobs.map(function (job) {
                         expect(ids.indexOf(Number(job.id))).to.equal(-1);
                     });
                     done();
@@ -255,7 +255,7 @@ describe('Models', function () {
                     expect(jobs).to.be.an('array');
                     expect(jobs.length).to.equal(5);
                     var ids = [2, 3, 4, 5, 6];
-                    _.map(jobs, function (job) {
+                    jobs.map(function (job) {
                         expect(ids.indexOf(Number(job.id))).to.equal(-1);
                     });
                     done();
@@ -294,7 +294,7 @@ describe('Models', function () {
                     expect(jobs).to.be.an('array');
                     expect(jobs.length).to.equal(7);
                     var ids = [4, 5, 6, 7, 8, 9, 10];
-                    _.map(jobs, function (job) {
+                    jobs.map(function (job) {
                         expect(ids.indexOf(Number(job.id))).to.equal(-1);
                     });
                     done();
