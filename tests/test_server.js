@@ -1,4 +1,3 @@
-var _ = require('lodash');
 var bull = require('bull');
 var chai = require('chai');
 var expect = chai.expect;
