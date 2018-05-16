@@ -28,7 +28,7 @@ var runLessMin = function () {
         .pipe(less())
         .pipe(cssmin())
         .pipe(gulp.dest('./public/css'));
-}
+};
 
 gulp.task('less', runLess);
 gulp.task('lessMin', runLessMin);

@@ -68,14 +68,14 @@ describe('Models', function () {
                 expect(keys).to.be.a('array');
                 expect(keys.length).to.equal(6);
                 done();
-            })
+            });
         });
 
         it('#total()', function (done) {
             Queue.total('test queue').then(function (total) {
                 expect(parseInt(total)).to.equal(20);
                 done();
-            })
+            });
         });
 
         it('#remove()', function (done) {

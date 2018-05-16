@@ -97,7 +97,7 @@ describe('Server', function () {
                         .end(function (err, res) {
                             if (err) {
                                 done(err);
-                                return
+                                return;
                             }
                             expect(res.body.status).to.equal('OK');
                             expect(res.body.job).to.exist;
@@ -151,7 +151,7 @@ describe('Server', function () {
                         .end(function (err, res) {
                             if (err) {
                                 done(err);
-                                return
+                                return;
                             }
                             expect(res.body.status).to.equal('OK');
                             expect(res.body.job).to.exist;

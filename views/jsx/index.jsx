@@ -1,5 +1,5 @@
 var React = require('react');
-var LinkedStateMixin = require('react/addons').addons.LinkedStateMixin;
+var LinkedStateMixin = require('react-addons-linked-state-mixin');
 var $ = require('jquery');
 
 var Sidebar = require('./sidebar.jsx');

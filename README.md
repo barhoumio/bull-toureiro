@@ -111,7 +111,8 @@ It's compatible with all modern browsers. Since the front end relies on `react`,
 
 The MIT License (MIT)
 
-Copyright (c) 2017 barhoumio
+Copyright (c) 2018 barhoumio https://github.com/barhoumio
+Copyright (c) 2015 Epharmix evan@epharmix.com
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

@@ -88,7 +88,7 @@ var Job = React.createClass({
                     <br/>
                     {
                         this.props.showState ? (
-                            <h5 className={"job-state " + job.state}>{job.state[0].toUpperCase() + job.state.substring(1)}</h5>
+                            <h5 className={'job-state ' + job.state}>{job.state[0].toUpperCase() + job.state.substring(1)}</h5>
                         ) : ''
                     }
                     {
@@ -165,9 +165,9 @@ var JobDetails = React.createClass({
 
     getJobById: function () {
         var _this = this;
-        var id = $(this.refs.idField.getDOMNode()).val()
+        var id = $(this.refs.idField.getDOMNode()).val();
         if (id) {
-            $.get('/job/', {
+            $.get('job/', {
                 queue: this.props.queue,
                 id: id
             }, function (response) {

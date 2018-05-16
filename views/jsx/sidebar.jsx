@@ -31,7 +31,7 @@ ToureiroSidebar = React.createClass({
             if (response.status === 'OK') {
                 _this.setState({
                     queues: response.queues
-                })
+                });
                 if (!_this.state.queue && response.queues.length > 0) {
                     _this.getQueue(response.queues[0]);
                 }
