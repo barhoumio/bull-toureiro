@@ -1,6 +1,6 @@
 {
   "name": "bull-toureiro",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "description": "A graphic interface for bull >= v3",
   "main": "index.js",
   "scripts": {
@@ -42,6 +42,7 @@
     "pug": "~2.0.3",
     "react": "~0.14.8",
     "react-addons-linked-state-mixin": "~0.14.8",
+    "react-dom": "~0.14.8",
     "redis": "~2.8.0"
   },
   "devDependencies": {

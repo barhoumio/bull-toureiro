@@ -1,4 +1,5 @@
 var React = require('react');
+var ReactDOM = require('react-dom');
 var $ = require('jquery');
 var moment = require('moment-timezone');
 var hljs = require('highlight.js');
@@ -8,7 +9,7 @@ var Pagination = require('./pagination.jsx');
 var Job = React.createClass({
 
     componentDidMount: function () {
-        hljs.highlightBlock(this.refs.code.getDOMNode());
+        hljs.highlightBlock(ReactDOM.findDOMNode(this.refs.code));
     },
 
     promoteJob: function () {
@@ -165,7 +166,7 @@ var JobDetails = React.createClass({
 
     getJobById: function () {
         var _this = this;
-        var id = $(this.refs.idField.getDOMNode()).val();
+        var id = $(ReactDOM.findDOMNode(this.refs.idField)).val();
         if (id) {
             $.get('job/', {
                 queue: this.props.queue,

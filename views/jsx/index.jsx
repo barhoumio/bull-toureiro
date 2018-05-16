@@ -1,5 +1,6 @@
 var React = require('react');
 var LinkedStateMixin = require('react-addons-linked-state-mixin');
+var ReactDOM = require('react-dom');
 var $ = require('jquery');
 
 var Sidebar = require('./sidebar.jsx');
@@ -61,4 +62,4 @@ var Toureiro = React.createClass({
     }
 });
 
-React.render(<Toureiro/>, $('#toureiro-wrapper')[0]);
+ReactDOM.render(<Toureiro/>, $('#toureiro-wrapper')[0]);
